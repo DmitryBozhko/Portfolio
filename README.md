@@ -17,24 +17,6 @@ Built with React, Framer Motion, and Tailwind CSS, this project showcases my bac
 
 ---
 
-## 📂 Folder Structure
-
-```
-my-portfolio/
-├── public/
-│   ├── images/
-│   └── Dmitry_Bozhko_Resume.pdf
-├── src/
-│   ├── components/
-│   ├── data/
-│   ├── pages/
-│   └── App.jsx
-├── package.json
-└── vite.config.js
-```
-
----
-
 ## 🛠 How to Run This Project Locally
 
 ### 1. Clone the Repo
@@ -63,20 +45,6 @@ npm run dev -- --host
 ```bash
 npm run build
 ```
-
----
-
-## 📬 Contact Form
-
-The contact form is handled using [**Formspree**](https://formspree.io).  
-Submissions are securely sent to my email without needing a custom backend.
-
----
-
-## 📡 Deployment
-
-This site is deployed using [**Vercel**](https://vercel.com)  
-and is live at [**dmitrybozhko.com**](https://dmitrybozhko.com)
 
 ---
 
