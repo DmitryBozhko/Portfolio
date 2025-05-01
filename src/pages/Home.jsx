@@ -28,7 +28,7 @@ function Home() {
         <motion.img 
           src="/images/profile.jpg" 
           alt="Dmitry Bozhko" 
-          className="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-lg"
+          className="w-40 h-40 md:w-48 md:h-48 rounded-2xl shadow-lg"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
