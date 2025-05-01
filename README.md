@@ -9,11 +9,12 @@ Built with React, Framer Motion, and Tailwind CSS, this project showcases my bac
 
 ## 🚀 Features
 
-- Clean, responsive UI built with **React** and **Tailwind CSS**
-- Animated transitions via **Framer Motion**
-- Contact form powered by **Formspree**
-- Fully responsive and mobile-friendly
-- Deployed via **Vercel**
+- Built with **Vite + React** for fast development and optimized builds  
+- Styled with **Tailwind CSS** for responsive design  
+- Animated transitions powered by **Framer Motion**  
+- Contact form handled via **Formspree**  
+- Fully responsive and mobile-friendly  
+- Deployed with **Vercel**
 
 ---
 
