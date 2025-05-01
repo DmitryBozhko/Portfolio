@@ -49,7 +49,7 @@ function About() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-ocean-blue underline hover:opacity-80"
-          >
+           >
             Download My Resume (PDF)
           </a>
         </p>

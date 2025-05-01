@@ -62,6 +62,19 @@ function ProjectDetail() {
               </a>
             </div>
           )}
+
+          {project.file && (
+            <div className="mt-4">
+              <a 
+                href={project.file} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-ocean-blue underline hover:opacity-80 text-lg"
+              >
+                Download Project Report (PDF)
+              </a>
+            </div>
+          )}
         </motion.div>
       </div>
     </motion.section>
