@@ -1,20 +1,31 @@
-// src/pages/Contact.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 function Contact() {
-  // Form state placeholders (not functional)
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Placeholder: handle form submission (e.g., send to API or service)
-    console.log('Form submitted:', formData);
-    // Reset form or provide feedback as needed
+  
+    const response = await fetch("https://formspree.io/f/myzweypr", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    if (response.ok) {
+      alert("Message sent successfully!");
+      setFormData({ name: '', email: '', message: '' });
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -68,11 +79,9 @@ function Contact() {
             Send Message
           </button>
         </form>
-        {/* Social Links */}
         <div className="mt-8 text-center">
           <p>Or find me on:</p>
           <div className="flex justify-center space-x-6 mt-4">
-            {/* Update the href with your actual profiles and ensure icons in /public/images */}
             <a href="https://github.com/DmitryBozhko" target="_blank" rel="noopener noreferrer">
               <img src="/images/github.png" alt="GitHub" className="h-8 w-8" />
             </a>

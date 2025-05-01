@@ -1,4 +1,3 @@
-// src/pages/Skills.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -32,41 +31,39 @@ function Skills() {
     >
       <h2 className="text-3xl font-bold text-white mb-8 text-center">Skills</h2>
 
-      {/* Technical Skills */}
-      <div className="mb-12">
+      <div className="mb-20">
         <h3 className="text-2xl font-semibold text-white mb-6">Technical Skills</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="flex flex-wrap gap-8 justify-center">
           {technicalSkills.map((skill, index) => (
             <motion.div 
               key={skill.name} 
-              className="flex flex-col items-center"
+              className="flex flex-col items-center w-[100px]"
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.2, delay: index * 0.1 }}
             >
               <img src={skill.image} alt={skill.name} className="h-12 mb-2" />
-              <span>{skill.name}</span>
+              <span className="text-center">{skill.name}</span>
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Non-Technical Skills */}
       <div>
         <h3 className="text-2xl font-semibold text-white mb-6">Non-Technical Skills</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="flex flex-wrap gap-8 justify-center">
           {nonTechnicalSkills.map((skill, index) => (
             <motion.div 
               key={skill.name} 
-              className="flex flex-col items-center"
+              className="flex flex-col items-center w-[100px]"
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.2, delay: index * 0.1 }}
             >
               <img src={skill.image} alt={skill.name} className="h-12 mb-2" />
-              <span>{skill.name}</span>
+              <span className="text-center">{skill.name}</span>
             </motion.div>
           ))}
         </div>

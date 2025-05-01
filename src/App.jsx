@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -14,9 +13,7 @@ function App() {
   const location = useLocation();
   return (
     <div className="App">
-      {/* Fixed Navbar */}
       <Navbar />
-      {/* Page transition wrapper */}
       <div className="pt-16">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -25,17 +24,16 @@ function Home() {
         View Projects
       </motion.a>
 
-      {/* Bio + Photo Section */}
       <div className="flex flex-col md:flex-row items-center max-w-4xl w-full gap-6">
         <motion.img 
           src="/images/profile.jpg" 
           alt="Dmitry Bozhko" 
-          className="w-40 md:w-48 md:h-48 object-cover rounded-2xl shadow-lg mb-6 md:mb-0 md:mr-8"
+          className="w-40 h-40 md:w-48 md:h-48 rounded-full shadow-lg"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
-/>
+        />
         <div className="text-gray-300 text-left">
           <h2 className="text-2xl font-semibold mb-2 text-white">About Me</h2>
           <p>

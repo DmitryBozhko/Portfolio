@@ -20,7 +20,8 @@ export const projects = [
     The site is fully responsive, mobile-friendly, and features a clean design showcasing my resume, projects, and background. 
     This helped me learn core frontend principles, UI structure, and React component logic.
     Major takeaways included learning layout systems, managing state, and deploying to Netlify.`,
-    image: "/images/project2.jpg"
+    image: "/images/project2.jpg",
+    link: "https://github.com/DmitryBozhko/Portfolio"
   },
   {
     id: 3,
