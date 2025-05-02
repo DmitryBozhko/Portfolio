@@ -25,15 +25,48 @@ export const projects = [
   },
   {
     id: 3,
-    title: "FAT32 File System Emulator",
-  description: "A command-line FAT32 file system emulator written in C++.",
-  details: `This project was built for an operating systems course and simulates a simplified FAT32 file system using C++. 
-  It supports common file system commands such as ls, cd, mkdir, open, read, write, and rm within a virtual disk environment. 
-  I learned how file systems manage data at a low level, including block allocation, directory traversal, and file descriptor tracking. 
-  The project emphasized pointer manipulation, memory layout, and maintaining consistency between the FAT and directory structures.
-  Major takeaways included system-level design, recursive path resolution, and simulating real-world OS behavior.
-  One of the major challenges I faced building this system was implementing support for command piping and redirection operators (like | and >), which required parsing and managing inter-process behavior within the emulator.`,
-  image: "/images/project3.jpg",
-  link: "https://github.com/DmitryBozhko/335Project2"
+    title: "Team Meeting Scheduler",
+    description: "A command-line tool for finding common free time across multiple team members.",
+    details: `This project was built in C++ and designed to parse schedules for multiple users from an input file, 
+    identify their individual free time slots, and compute overlapping availability to suggest meeting times. 
+    It supports working hour constraints, flexible meeting durations, and merges overlapping intervals to optimize results. 
+    The program outputs available time windows to a separate file and includes edge case handling like back-to-back meetings, 
+    all-day availability, and empty schedules. 
+    I learned how to work with time-based logic, file parsing, and interval merging. 
+    One of the major challenges was accurately handling edge cases and ensuring consistent formatting across outputs.`,
+    image: "/images/project3.jpg",
+    link: "https://github.com/DmitryBozhko/335Project2"
+  },
+  
+  {
+    id: 4,
+    title: "In-Memory Filesystem in Rust",
+    description: "A Rust-based in-memory filesystem with block storage, journaling and undo capability.",
+    details: `This project implements a simple in-memory filesystem in Rust, featuring:
+    - Inode and block storage abstractions with fixed BLOCK_SIZE
+    - Journaling of operations (create directory, create file, add file to directory, write to file)
+    - Undo functionality by replaying the inverse of the last journal entry
+    - Directory listing, file read/write, and clean separation of concerns
+    - Usage of Rust enums, HashMap, and ownership to model filesystem state
+  
+    I designed and coded the entire architecture, focusing on correctness of journal commit/rollback logic, safe memory handling, and clear separation between filesystem metadata (inodes) and data blocks. Challenges included serializing the old file data into the journal for undo, and ensuring block cleanup on writes.`,
+    image: "/images/project4.jpg",
+    link: "https://github.com/DmitryBozhko/RustFileSystem"
+  },
+  {
+    id: 5,
+    title: "Custom Linux Shell in C",
+    description: "A lightweight Unix-style command interpreter written in C",
+    details: `This project implements a minimal shell (“bash”-lite) in C, featuring:
+    - Parsing of user input into commands, arguments, and special tokens (|, >, ECHO, SPECHO)
+    - Built-in support for cd, mkdir, help, exit, and “!!” to repeat the last command
+    - Execution of external programs via fork()/execvp() with proper parent/child synchronization
+    - I/O redirection (‘>’) and single-pipe support, handling multiple pipeline stages
+    - Custom “ECHO” and “SPECHO” modes that parse and print words, spaces, and PIPE markers on separate lines
+    - Maintenance of last_command buffer for command re-run functionality
+  
+    I designed the lexer/parser by splitting on spaces and special characters, then implemented process control with Unix system calls (fork, execvp, wait). Challenges included correctly wiring pipe file descriptors, handling edge cases in built-ins vs. external commands, and preserving command history for “!!”.`,
+    image: "/images/project5.jpg",
+    link: "https://github.com/DmitryBozhko/LinuxShell"
   }
 ];
