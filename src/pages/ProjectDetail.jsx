@@ -48,7 +48,7 @@ function ProjectDetail() {
           transition={{ duration: 0.3, delay: 0.1 }}
         >
           <h2 className="text-3xl font-bold text-white mb-4">{project.title}</h2>
-          <p className="mb-4">{project.details}</p>
+          <pre className="whitespace-pre-wrap text-sm mb-4">{project.details}</pre>
 
           {project.link && (
             <div className="mt-6">
